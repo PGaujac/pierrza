@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { Button } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
+
+import './Detail.css';
 
 class Detail extends Component {
   state = {
@@ -10,24 +13,31 @@ class Detail extends Component {
   showDetail = () => {
     this.setState({ show: !this.state.show });
   };
+
   render() {
+    const pizza = this.props.pizza || {};
     return (
       <div>
-        <Modal show={this.state.show} centered={true} size='lg'>
+        <Modal show={this.props.show} centered={true} size='lg'>
           <Modal.Header>
-            <Modal.Title>Titre</Modal.Title>
+            <Modal.Title>{pizza.pizza}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>Body</p>
+            <p>{pizza.detail}</p>
+            <Image
+              className='pizza-img'
+              src={pizza.img}
+              alt='pizza'
+              roundedCircle
+            />
           </Modal.Body>
           <Modal.Footer>
             <Button variant='dark'>Ajouter au panier</Button>
-            <Button variant='dark' onClick={this.showDetail}>
+            <Button variant='dark' onClick={this.props.action}>
               Fermer
             </Button>
           </Modal.Footer>
         </Modal>
-        <Button onClick={this.showDetail}>TEST</Button>
       </div>
     );
   }

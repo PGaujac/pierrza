@@ -3,62 +3,86 @@
     {
       "pizza": "MARGUERITE",
       "description": "Tomate, fromage, olives, origan",
-      "price": "8$"
+      "price": "8$",
+      "detail": "Sauce tomate fraiche du jour, emmental direct de la ferme , olives a peine tombées de l'arbre, origan fraichement haché",
+      "img": "/img/margerite.jpeg"
     },
     {
       "pizza": "MOZZARELLA",
       "description": "Tomate, mozzarella, olives, origan",
-      "price": "8$"
+      "price": "8$",
+      "detail": "Sauce tomate fraiche du jour, mozzarella di buffala de la vache a l'assiette, olives très olivés !",
+      "img": "/img/mozzarella.jpeg"
     },
     {
       "pizza": "NAPOLITAINE",
       "description": "Tomate, anchois, fromage, olives, origan",
-      "price": "9$"
+      "price": "9$",
+      "detail": "Sauce tomate fraiche du jour, anchois de la mer a l'assiette !",
+      "img": "/img/napolitaine.jpeg"
     },
     {
       "pizza": "SICILIENNE",
       "description": "Tomate, anchois, câpres, fromage, olives, origan",
-      "price": "9$"
+      "price": "9$",
+      "detail": "Comme la napolitaine mais avec des capres en plus !",
+      "img": "/img/sicilienne.jpeg"
     },
     {
       "pizza": "CHORIZO",
       "description": "Tomate, chorizo, fromage, olives, origan",
-      "price": "12$"
+      "price": "12$",
+      "detail": "Sauce tomate fraiche du jour, chorizo direct producteur en Espagne.",
+      "img": "/img/chorizo.jpeg"
     },
     {
       "pizza": "MERGUEZ",
       "description": "Tomate, merguez, fromage, olives, origan",
-      "price": "12$"
+      "price": "12$",
+      "detail": "Sauce tomate fraiche du jour, merguez du coin",
+      "img": "/img/merguez.jpeg"
     },
     {
       "pizza": "REINE",
       "description": "Tomate, jambon, champignons, fromage, olives, origan",
-      "price": "10$"
+      "price": "10$",
+      "detail": "Une reine, tout le monde connait la reine....",
+      "img": "/img/reine.jpeg"
     },
     {
       "pizza": "4 FROMAGES",
       "description": "Tomate, mozzarella, chèvre, roquefort, fromage, origan",
-      "price": "15$"
+      "price": "15$",
+      "detail": "C'est ecrit sur le titre....",
+      "img": "/img/4froms.jpeg"
     },
     {
       "pizza": "SOLEIL",
       "description": "Pepperoni, Jalapenos, Olives",
-      "price": "12$"
+      "price": "12$",
+      "detail": "La Pierrza de Pierre",
+      "img": "/img/soleil.jpeg"
     },
     {
       "pizza": "CARNIVORE",
       "description": "Tomate, viande hachée, oignons, fromage, olives, origan",
-      "price": "11$"
+      "price": "11$",
+      "detail": "Ne conviens pas aux végétariens.",
+      "img": "/img/carnivore.jpeg"
     },
     {
       "pizza": "EXOTIQUE",
       "description": "Crème aux herbes, poulet, poivrons, ananas, fromage, olives, origan",
-      "price": "13$"
+      "price": "13$",
+      "detail": "C'est bon ça !",
+      "img": "/img/exotique.jpeg"
     },
     {
       "pizza": "ITALIENNE",
       "description": "Tomate, tomates fraîches, mozzarella, pesto, jambon cru, olives",
-      "price": "14$"
+      "price": "14$",
+      "detail": "Le gout de l'Italie mais sans les italiens ! ",
+      "img": "/img/italienne.jpeg"
     }
   ]
 }
