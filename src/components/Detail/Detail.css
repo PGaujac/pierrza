@@ -2,3 +2,31 @@
   display: block;
   margin: 0 auto;
 }
+
+.modal-title {
+  margin: 0 auto;
+
+  color: #fff;
+}
+
+.modal-header {
+  background-color: #343a40;
+}
+
+.pizza-detail {
+  padding: 2rem 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.modal-body {
+  background-color: #292e33;
+}
+
+.modal-footer {
+  background-color: #343a40;
+}
+
+.modal-btn {
+  margin: 0 0.5rem;
+}

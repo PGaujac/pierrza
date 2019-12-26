@@ -23,7 +23,7 @@ class Detail extends Component {
             <Modal.Title>{pizza.pizza}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>{pizza.detail}</p>
+            <p className='pizza-detail'>{pizza.detail}</p>
             <Image
               className='pizza-img'
               src={pizza.img}
@@ -32,8 +32,14 @@ class Detail extends Component {
             />
           </Modal.Body>
           <Modal.Footer>
-            <Button variant='dark'>Ajouter au panier</Button>
-            <Button variant='dark' onClick={this.props.action}>
+            <Button className='modal-btn' variant='light'>
+              Ajouter au panier
+            </Button>
+            <Button
+              className='modal-btn'
+              variant='light'
+              onClick={this.props.action}
+            >
               Fermer
             </Button>
           </Modal.Footer>

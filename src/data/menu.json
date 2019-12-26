@@ -4,7 +4,7 @@
       "pizza": "MARGUERITE",
       "description": "Tomate, fromage, olives, origan",
       "price": "8$",
-      "detail": "Sauce tomate fraiche du jour, emmental direct de la ferme , olives a peine tombées de l'arbre, origan fraichement haché",
+      "detail": "Sauce tomate fraiche du jour, emmental direct de la ferme , olives a peine tombées de l'arbre.",
       "img": "/img/margerite.jpeg"
     },
     {
@@ -18,7 +18,7 @@
       "pizza": "NAPOLITAINE",
       "description": "Tomate, anchois, fromage, olives, origan",
       "price": "9$",
-      "detail": "Sauce tomate fraiche du jour, anchois de la mer a l'assiette !",
+      "detail": "Sauce tomate fraiche du jour, anchois ceuillis le jour meme !",
       "img": "/img/napolitaine.jpeg"
     },
     {
@@ -39,7 +39,7 @@
       "pizza": "MERGUEZ",
       "description": "Tomate, merguez, fromage, olives, origan",
       "price": "12$",
-      "detail": "Sauce tomate fraiche du jour, merguez du coin",
+      "detail": "Sauce tomate fraiche du jour, merguez de chez Touffik",
       "img": "/img/merguez.jpeg"
     },
     {
