@@ -1,42 +1,42 @@
 #menu {
-	height: 100vh;
-	background-image: url('/img/four.jpg');
-	position: relative;
+  height: 100vh;
+  background-image: url('/img/four.jpg');
+  position: relative;
 }
 
 #menu .main-heading {
-	padding: 100px 0 4rem 0;
-	font-size: 4rem;
-	font-weight: 300;
-	color: #fff;
-	text-align: center;
-	letter-spacing: 1.5rem;
+  padding: 100px 0 4rem 0;
+  font-size: 4rem;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1.5rem;
 }
 
 #menu .overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: black;
-	opacity: 0.5;
-	z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
 }
 
 #menu .content {
-	z-index: 2;
-	position: relative;
+  z-index: 2;
+  position: relative;
 }
 
-.card {
-	margin-top: 3rem;
-	padding: 1rem 1rem 0rem 1rem;
-	background-color: #343a40;
+#menu .card {
+  margin-top: 3rem;
+  padding: 1rem 1rem 0rem 1rem;
+  background-color: #343a40;
 }
 
 table {
-	cursor: pointer;
-	text-transform: uppercase;
-	font-weight: 300;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 300;
 }
