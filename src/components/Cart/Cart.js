@@ -10,6 +10,8 @@ import { Button } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import PizzaPerso from '../PizzaPerso/PizzaPerso';
+import PizzaPerso2 from '../PizzaPerso/PizzaPerso2';
+import PizzaPersoSelect from '../PizzaPerso/PizzaPersoSelect';
 class Cart extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +21,7 @@ class Cart extends Component {
   render() {
     return (
       <div>
-        <PizzaPerso />
+        <PizzaPersoSelect />
       </div>
     );
   }

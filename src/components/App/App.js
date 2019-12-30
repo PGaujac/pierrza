@@ -10,7 +10,6 @@ import Nav from 'react-bootstrap/Nav';
 import Home from '../Home/Home';
 import About from '../About/About';
 import Cart from '../Cart/Cart';
-import PizzaPerso from '../PizzaPerso/PizzaPerso';
 
 //Styles import
 import './App.css';

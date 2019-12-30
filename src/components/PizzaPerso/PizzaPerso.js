@@ -3,7 +3,6 @@ import { toppings } from '../../data/toppings.json';
 import { Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-import { Card } from 'react-bootstrap';
 import Draggable from './Dnd/Draggable/index';
 import Dropable from './Dnd/Dropable/index';
 import styled from 'styled-components';
