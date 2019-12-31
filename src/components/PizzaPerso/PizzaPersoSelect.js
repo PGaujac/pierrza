@@ -12,10 +12,11 @@ export class PizzaPersoSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toppings: [],
-      prix: '6$'
+      toppings: []
     };
   }
+
+  // Add toppings to left table
   addToppings = topping => {
     // Clone state, just in case
     if (this.state.toppings.length < 7) {
@@ -30,19 +31,41 @@ export class PizzaPersoSelect extends Component {
     }
   };
 
+  displayPrice = () => {
+    return this.state.toppings.length + 6;
+  };
+
+  //Remove toppings individually
+  //Array method has to be changed this only removes the topping that was last added
+  removeTopping = () => {
+    const toppingsClone = this.state.toppings;
+    toppingsClone.pop();
+    this.setState({
+      toppings: toppingsClone
+    });
+  };
+
   clearToppings = () => {
     this.setState({ toppings: [] });
   };
 
+  //Display toppings in right table
   displayToppings = () => {
     const ingr = this.state.toppings.map((element, index) => (
       <tr key={index}>
         <td>{element.name}</td>
+        <td>
+          <i
+            onClick={() => this.removeTopping()}
+            className='fas fa-window-close'
+          ></i>
+        </td>
       </tr>
     ));
     return ingr;
   };
 
+  //Display toppings in left table
   createPizza = () => {
     const ingredients = toppings.map((element, index) => (
       <tr key={index}>
@@ -81,12 +104,23 @@ export class PizzaPersoSelect extends Component {
                   <Table striped bordered hover variant='dark'>
                     <thead>
                       <tr>
-                        <th>Votre Pierrza</th>
-                        {/* <th>Son prix</th> */}
-                        <th onClick={() => this.clearToppings()}>Reset</th>
+                        <th className='topping-head'>Votre Pierrza</th>
+
+                        <th
+                          className='topping-head'
+                          onClick={() => this.clearToppings()}
+                        >
+                          Reset
+                        </th>
                       </tr>
                     </thead>
                     <tbody>{this.displayToppings()}</tbody>
+                    <tfoot>
+                      <tr>
+                        <td className='total'>Total</td>
+                        <td>{this.displayPrice()}$</td>
+                      </tr>
+                    </tfoot>
                   </Table>
                 </Card>
               </Col>
