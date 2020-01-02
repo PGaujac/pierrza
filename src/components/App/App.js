@@ -10,6 +10,7 @@ import Nav from 'react-bootstrap/Nav';
 import Home from '../Home/Home';
 import About from '../About/About';
 import Cart from '../Cart/Cart';
+import PizzaPersoSelect from '../PizzaPerso/PizzaPersoSelect';
 
 //Styles import
 import './App.css';
@@ -21,9 +22,20 @@ class App extends Component {
 
     this.state = {
       navStyle: '',
-      btnDisplay: ''
+      btnDisplay: '',
+      cart: []
     };
   }
+
+  addToCart = pizza => {
+    const cartContent = this.state.cart.slice(0);
+    cartContent.push(pizza);
+    this.setState({ cart: cartContent });
+  };
+
+  clearCart = () => {
+    this.setState({ cart: [] });
+  };
 
   componentDidMount() {
     window.addEventListener('scroll', () => {
@@ -58,6 +70,8 @@ class App extends Component {
 
                 <Link to='About'>About</Link>
 
+                <Link to='Pizza-Maker'>Pizza Maker</Link>
+
                 <Link to='Cart'>Cart</Link>
               </div>
             </div>
@@ -65,14 +79,20 @@ class App extends Component {
         </Navbar>
 
         <Switch>
+          <Route path='/Pizza-Maker'>
+            <PizzaPersoSelect addToCart={this.addToCart}></PizzaPersoSelect>
+          </Route>
           <Route path='/About'>
             <About></About>
           </Route>
           <Route path='/Cart'>
-            <Cart></Cart>
+            <Cart cart={this.state.cart} clearCart={this.clearCart}></Cart>
           </Route>
           <Route path='/'>
-            <Home btnStyle={this.state.btnDisplay}></Home>
+            <Home
+              addToCart={this.addToCart}
+              btnStyle={this.state.btnDisplay}
+            ></Home>
           </Route>
         </Switch>
       </Router>

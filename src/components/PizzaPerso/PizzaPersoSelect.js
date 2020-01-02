@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
@@ -12,7 +12,8 @@ export class PizzaPersoSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toppings: []
+      toppings: [],
+      isActive: false
     };
   }
 
@@ -27,12 +28,12 @@ export class PizzaPersoSelect extends Component {
         toppings
       });
     } else {
-      alert('GREEDY FUCKER (placeholder)');
+      this.youAskedForIt();
     }
   };
 
   displayPrice = () => {
-    return this.state.toppings.length + 6;
+    return this.state.toppings.length + 3;
   };
 
   //Remove toppings individually
@@ -76,13 +77,17 @@ export class PizzaPersoSelect extends Component {
     return ingredients;
   };
 
+  youAskedForIt = () => {
+    this.setState({ isActive: true });
+  };
+
   render() {
     return (
       <div id='perso-menu'>
         <div className='content'>
           <h1 className='main-heading'>Créez votre Pierrza</h1>
           <h4 className='topping-desc'>
-            Base 6$ puis 1$ par topping, MAX 7 toppings
+            Base 3$ puis 1$ par topping, MAX 7 toppings
           </h4>
           <Container>
             <Row>
@@ -91,8 +96,8 @@ export class PizzaPersoSelect extends Component {
                   <Table striped bordered hover variant='dark'>
                     <thead>
                       <tr>
-                        <th>Les Ingrédients</th>
-                        <th>Les Moneys</th>
+                        <th className='topping-head'>Les Ingrédients</th>
+                        <th className='topping-head'>Les Moneys</th>
                       </tr>
                     </thead>
                     <tbody>{this.createPizza()}</tbody>
@@ -123,10 +128,21 @@ export class PizzaPersoSelect extends Component {
                     </tfoot>
                   </Table>
                 </Card>
+                <Button
+                  variant='light'
+                  onClick={() => this.props.addToCart(toppings)}
+                >
+                  Add To Cart
+                </Button>
               </Col>
             </Row>
           </Container>
         </div>
+        <img
+          className={this.state.isActive === false ? 'not-active' : 'visible'}
+          src='/img/TMNT.jpg'
+          alt='lol'
+        ></img>
 
         <div className='overlay'></div>
       </div>

@@ -15,7 +15,8 @@ export default class Menu extends Component {
     this.handler = this.handler.bind(this);
     this.state = {
       pizza: null,
-      show: false
+      show: false,
+      cart: []
     };
   }
   handler() {
@@ -23,6 +24,12 @@ export default class Menu extends Component {
       show: false
     });
   }
+
+  // addToCart = pizza => {
+  //   const cartContent = this.state.cart.slice(0);
+  //   cartContent.push(pizza);
+  //   this.setState({ cart: cartContent });
+  // };
 
   setPizza = pizza => {
     this.setState({
@@ -37,6 +44,12 @@ export default class Menu extends Component {
         <td onClick={() => this.setPizza(element)}>{element.pizza}</td>
         <td>{element.description}</td>
         <td>{element.price}</td>
+        <td>
+          <i
+            onClick={() => this.props.addToCart(element)}
+            className='fas fa-cart-arrow-down cartIcon'
+          ></i>
+        </td>
       </tr>
     ));
     return pizzas;
@@ -57,6 +70,7 @@ export default class Menu extends Component {
                         <th>La Pierrza</th>
                         <th>Les Ingrédients</th>
                         <th>Les Moneys</th>
+                        <th>Au Panier !</th>
                       </tr>
                     </thead>
                     <tbody>{this.menu()}</tbody>

@@ -6,10 +6,12 @@ import Image from 'react-bootstrap/Image';
 import './Detail.css';
 
 class Detail extends Component {
-  state = {
-    show: false
-  };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false
+    };
+  }
   showDetail = () => {
     this.setState({ show: !this.state.show });
   };
@@ -32,9 +34,6 @@ class Detail extends Component {
             />
           </Modal.Body>
           <Modal.Footer>
-            <Button className='modal-btn' variant='light'>
-              Ajouter au panier
-            </Button>
             <Button
               className='modal-btn'
               variant='light'
