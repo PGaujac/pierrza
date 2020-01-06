@@ -24,8 +24,7 @@ export class PizzaPersoSelect extends Component {
       const toppings = this.state.toppings.slice(0);
       toppings.push(topping);
       this.setState({
-        ...this.state,
-        toppings
+        toppings: toppings
       });
     } else {
       this.youAskedForIt();
@@ -38,9 +37,9 @@ export class PizzaPersoSelect extends Component {
 
   //Remove toppings individually
   //Array method has to be changed this only removes the topping that was last added
-  removeTopping = () => {
+  removeTopping = (index) => {
     const toppingsClone = this.state.toppings;
-    toppingsClone.pop();
+    toppingsClone.splice(index,1);
     this.setState({
       toppings: toppingsClone
     });
@@ -57,7 +56,7 @@ export class PizzaPersoSelect extends Component {
         <td>{element.name}</td>
         <td>
           <i
-            onClick={() => this.removeTopping()}
+            onClick={() => this.removeTopping(index)}
             className='fas fa-window-close'
           ></i>
         </td>
