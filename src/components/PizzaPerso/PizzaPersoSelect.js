@@ -37,9 +37,9 @@ export class PizzaPersoSelect extends Component {
 
   //Remove toppings individually
   //Array method has to be changed this only removes the topping that was last added
-  removeTopping = (index) => {
+  removeTopping = index => {
     const toppingsClone = this.state.toppings;
-    toppingsClone.splice(index,1);
+    toppingsClone.splice(index, 1);
     this.setState({
       toppings: toppingsClone
     });
@@ -78,6 +78,23 @@ export class PizzaPersoSelect extends Component {
 
   youAskedForIt = () => {
     this.setState({ isActive: true });
+  };
+
+  toppingsToPizza = () => {
+    console.log(this.state.toppings);
+    const myPizza = {
+      pizza: 'Custom Pizza',
+      description: this.state.toppings.reduce((accumulator, element) => {
+        console.log(accumulator);
+        return accumulator + ' ' + element.name;
+      }),
+      price: this.state.toppings.reduce(
+        (accumulator, element) =>
+          accumulator + parseInt(element.price.substring(0, element.length - 1))
+      )
+    };
+    this.setState({ toppings: [] });
+    this.props.addToCart(myPizza);
   };
 
   render() {
@@ -130,6 +147,7 @@ export class PizzaPersoSelect extends Component {
                 <Button
                   variant='light'
                   onClick={() => this.props.addToCart(toppings)}
+                  onClick={() => this.toppingsToPizza()}
                 >
                   Add To Cart
                 </Button>

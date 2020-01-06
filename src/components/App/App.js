@@ -31,6 +31,7 @@ class App extends Component {
     const cartContent = this.state.cart.slice(0);
     cartContent.push(pizza);
     this.setState({ cart: cartContent });
+    console.log(pizza);
   };
 
   clearCart = () => {

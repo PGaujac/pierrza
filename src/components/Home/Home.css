@@ -1,41 +1,41 @@
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-	outline: none;
+  outline: none;
 }
 
 #showcase {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .carousel {
-	height: 86vh;
-	overflow: hidden;
+  height: 86vh;
+  overflow: hidden;
 }
 
 .showcase-btn {
-	display: block;
-	width: 100%;
-	padding: 1.6rem 0;
-	background-color: #343a40;
-	color: #f7f7f7;
-	font-size: 1.2rem;
-	text-align: center;
-	transform: scale(1);
-	transition: all 0.5s ease-in;
-	border: none;
+  display: block;
+  width: 100%;
+  padding: 1.6rem 0;
+  background-color: #343a40;
+  color: #f7f7f7;
+  font-size: 1.2rem;
+  text-align: center;
+  transform: scale(1);
+  transition: all 0.5s ease-in;
+  border: none;
 }
 
 .showcase-btn:hover {
-	background-color: #343a40e5;
-	color: #f7f7f7;
-	text-decoration: none;
-	transform: scale(1.1);
-	transition: all 0.5s ease-in-out;
+  background-color: #343a40e5;
+  color: #f7f7f7;
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
 }
 
 .btnOff {
-	display: none;
+  display: none;
 }
