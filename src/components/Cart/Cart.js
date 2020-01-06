@@ -22,14 +22,32 @@ class Cart extends Component {
     const cart = this.props.cart.map((element, index) => (
       <tr key={index}>
         <td>{element.pizza}</td>
-        <td>{element.price}</td>
+        <td>
+          {element.price}${' '}
+          <i
+            onClick={() => this.removePizza(index)}
+            className='fas fa-window-close'
+          ></i>
+        </td>
       </tr>
     ));
     return cart;
   };
 
+  removePizza = index => {
+    const cartClone = this.props.cart;
+    cartClone.splice(index, 1);
+    this.setState({
+      cart: cartClone
+    });
+  };
+
   totalPrice = () => {
-    return 10 * this.props.cart.length;
+    const total = this.props.cart.reduce(
+      (accumulator, element) => accumulator + parseFloat(element.price),
+      0
+    );
+    return total;
   };
   render() {
     return (

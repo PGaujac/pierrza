@@ -86,6 +86,7 @@ class App extends Component {
           <Route path='/About'>
             <About></About>
           </Route>
+
           <Route path='/Cart'>
             <Cart cart={this.state.cart} clearCart={this.clearCart}></Cart>
           </Route>

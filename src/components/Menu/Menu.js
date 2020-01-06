@@ -43,7 +43,7 @@ export default class Menu extends Component {
       <tr key={index}>
         <td onClick={() => this.setPizza(element)}>{element.pizza}</td>
         <td>{element.description}</td>
-        <td>{element.price}</td>
+        <td>{element.price}$</td>
         <td>
           <i
             onClick={() => this.props.addToCart(element)}
