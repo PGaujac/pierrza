@@ -1,0 +1,68 @@
+{
+  "toppings": [
+    {
+      "name": "Tomate",
+      "price": "1$"
+    },
+    {
+      "name": "Fromage",
+      "price": "1$"
+    },
+    {
+      "name": "Mozzarella",
+      "price": "1$"
+    },
+    {
+      "name": "Chevre",
+      "price": "1$"
+    },
+    {
+      "name": "Roquefort",
+      "price": "1$"
+    },
+    {
+      "name": "Jambon cuit",
+      "price": "1$"
+    },
+    {
+      "name": "Jambon cru",
+      "price": "1$"
+    },
+    {
+      "name": "Chorizo",
+      "price": "1$"
+    },
+    {
+      "name": "Merguez",
+      "price": "1$"
+    },
+    {
+      "name": "Viande hachée",
+      "price": "1$"
+    },
+    {
+      "name": "Olives",
+      "price": "1$"
+    },
+    {
+      "name": "Jalapenos",
+      "price": "1$"
+    },
+    {
+      "name": "Oignons",
+      "price": "1$"
+    },
+    {
+      "name": "Basilic",
+      "price": "1$"
+    },
+    {
+      "name": "Capres",
+      "price": "1$"
+    },
+    {
+      "name": "Anchoix",
+      "price": "1$"
+    }
+  ]
+}
