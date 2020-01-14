@@ -1,48 +1,52 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .nav-wrapper {
-	font-size: 1.6rem;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: flex-end !important;
 }
 
 .navBarFaded {
-	opacity: 0.8;
-	transition: opacity 1s;
+  opacity: 0.8;
+  transition: opacity 1s;
 }
 
 .navBarOpaque {
-	opacity: 1;
-	transition: opacity 1s;
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .nav-wrapper a {
-	display: inline-block;
-	text-decoration: none;
-	color: #f7f7f7;
-	padding: 0 2rem;
-	transform: scale(1);
-	transition: all 0.5s ease-in;
+  display: inline-block;
+  text-decoration: none;
+  color: #f7f7f7;
+  padding: 0 2rem;
+  transform: scale(1);
+  transition: all 0.5s ease-in;
 }
 
 .nav-wrapper a:hover {
-	display: inline-block;
-	transform: scale(1.3);
-	transition: all 0.5s ease-in-out;
+  display: inline-block;
+  transform: scale(1.3);
+  transition: all 0.5s ease-in-out;
 }
 
 .brand-logo {
-	letter-spacing: 1.4rem;
-	font-size: 2.2rem;
+  letter-spacing: 1.4rem;
+  font-size: 2.2rem;
+}
+.fa-shopping-cart {
 }
 
 /* Animation */
 
 @keyframes opacity {
-	from {
-		background-color: rgba(52, 58, 64, 1);
-	}
-	to {
-		background-color: rgba(52, 58, 64, 0.6);
-	}
+  from {
+    background-color: rgba(52, 58, 64, 1);
+  }
+  to {
+    background-color: rgba(52, 58, 64, 0.6);
+  }
 }

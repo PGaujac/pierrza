@@ -99,7 +99,9 @@ class App extends Component {
           <Nav className='mr-auto'>
             <div className='nav-container'>
               <div className='nav-wrapper'>
-                <Link to='/'>Home</Link>
+                <Link to='/'>
+                  <i className='fas fa-home'></i>
+                </Link>
 
                 <Link to='Menu'> Menu</Link>
 
@@ -107,7 +109,9 @@ class App extends Component {
 
                 <Link to='Pizza-Maker'>Pizza Maker</Link>
 
-                <Link to='Cart'>Cart</Link>
+                <Link to='Cart'>
+                  <i className='fas fa-shopping-cart'></i>
+                </Link>
               </div>
             </div>
           </Nav>
