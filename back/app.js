@@ -8,6 +8,7 @@ const cors = require('./middlewares/cors');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const orderRouter = require('./routes/orders');
+const pizzaFormRouter = require('./routes/pizzaForm');
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cart', orderRouter);
+app.use('/form', pizzaFormRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

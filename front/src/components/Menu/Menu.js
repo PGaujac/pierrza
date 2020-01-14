@@ -68,7 +68,7 @@ export default class Menu extends Component {
     fetch('http://localhost:8080/menu', menuData)
       .then(response => response.json())
       .then(data => {
-        this.setState({ menu: data.menu });
+        this.setState({ menu: data });
       });
   };
 

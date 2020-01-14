@@ -12,6 +12,7 @@ import About from '../About/About';
 import Cart from '../Cart/Cart';
 import PizzaPersoSelect from '../PizzaPerso/PizzaPersoSelect';
 import Menu from '../Menu/Menu';
+import PizzaForm from '../PizzaForm/PizzaForm';
 
 //Styles import
 import './App.css';
@@ -118,6 +119,9 @@ class App extends Component {
         </Navbar>
 
         <Switch>
+          <Route path='/form'>
+            <PizzaForm />
+          </Route>
           <Route path='/Menu'>
             <Menu addToCart={this.addToCart} />
           </Route>
