@@ -25,15 +25,14 @@ class App extends Component {
     this.state = {
       navStyle: '',
       btnDisplay: '',
-      cart: [],
-      isEmpty: true //this is to try and disable the 'commander' button when cart is empty
+      cart: []
     };
   }
 
-  // saveToLocal = () => {
-  //   const localCart = this.state.cart;
-  //   localStorage.setItem('cart', JSON.stringify(localCart));
-  // };
+  saveToLocal = () => {
+    const localCart = this.state.cart;
+    localStorage.setItem('cart', JSON.stringify(localCart));
+  };
   postCart = () => {
     const headers = new Headers({
       'Content-Type': 'application/json'
@@ -48,17 +47,19 @@ class App extends Component {
     fetch('http://localhost:8080/cart', data)
       .then(response => response.json())
       .then(
-        data => (
-          (document.getElementById('orderDisplay').innerHTML = data.message),
-          this.clearCart()
-        )
+        data => {
+          document.getElementById('orderDisplay').innerHTML = data.message;
+          this.clearCart();
+        },
+        error => console.log(error)
       );
   };
 
   addToCart = pizza => {
     const cartContent = this.state.cart.slice(0);
     cartContent.push(pizza);
-    this.setState({ cart: cartContent }); //, () => this.saveToLocal()
+    this.setState({ cart: cartContent });
+    this.saveToLocal(); //, () => this.saveToLocal()
   };
 
   clearCart = () => {
@@ -137,7 +138,6 @@ class App extends Component {
               cart={this.state.cart}
               clearCart={this.clearCart}
               post={this.postCart}
-              isEmpty={this.state.isEmpty}
             ></Cart>
           </Route>
           <Route path='/'>

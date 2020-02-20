@@ -3,6 +3,7 @@
 //Module import
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import Menu from '../Menu/Menu';
 
@@ -27,63 +28,72 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <div id='showcase' className='homeContainer'>
-          <Carousel className='carousel'>
-            <Carousel.Item>
-              <img
-                className='d-block w-100'
-                src='/img/pizza1.jpg'
-                alt='First slide'
-              />
-            </Carousel.Item>
+      <Container fluid style={{ padding: '0' }}>
+        <Row>
+          <Col>
+            <div id='showcase' className='homeContainer'>
+              <Carousel className='carousel'>
+                <Carousel.Item>
+                  <Image
+                    fluid
+                    className='d-block'
+                    src='/img/pizza1.jpg'
+                    alt='First slide'
+                  />
+                </Carousel.Item>
 
-            <Carousel.Item>
-              <img
-                className='d-block w-100'
-                src='/img/pizza2.jpg'
-                alt='Third slide'
-              />
-            </Carousel.Item>
+                <Carousel.Item>
+                  <Image
+                    fluid
+                    className='d-block w-100 h-100 img-fluid'
+                    src='/img/pizza2.jpg'
+                    alt='Third slide'
+                  />
+                </Carousel.Item>
 
-            <Carousel.Item>
-              <img
-                className='d-block w-100'
-                src='/img/pizza3.jpg'
-                alt='Third slide'
-              />
-            </Carousel.Item>
+                <Carousel.Item>
+                  <Image
+                    fluid
+                    className='d-block w-100 h-100 img-fluid'
+                    src='/img/pizza3.jpg'
+                    alt='Third slide'
+                  />
+                </Carousel.Item>
 
-            <Carousel.Item>
-              <img
-                className='d-block w-100'
-                src='/img/pizza4.jpg'
-                alt='Fourth slide'
-              />
-            </Carousel.Item>
+                <Carousel.Item>
+                  <Image
+                    fluid
+                    className='d-block w-100 h-100 img-fluid'
+                    src='/img/pizza4.jpg'
+                    alt='Fourth slide'
+                  />
+                </Carousel.Item>
 
-            <Carousel.Item>
-              <img
-                className='d-block w-100'
-                src='/img/pizza5.jpg'
-                alt='Fifth slide'
-              />
-            </Carousel.Item>
-          </Carousel>
-          <div className='btn-container'>
-            <button
-              onClick={this._showMenu}
-              className={'showcase-btn ' + this.props.btnStyle}
-            >
-              Click ici pour découvrir nos spécialités !
-            </button>
-          </div>
-        </div>
+                <Carousel.Item>
+                  <Image
+                    fluid
+                    className='d-block w-100 h-100 img-fluid'
+                    src='/img/pizza5.jpg'
+                    alt='Fifth slide'
+                  />
+                </Carousel.Item>
+              </Carousel>
+              <div className='btn-container'>
+                <button
+                  onClick={this._showMenu}
+                  className={'showcase-btn ' + this.props.btnStyle}
+                >
+                  Click ici pour découvrir nos spécialités !
+                </button>
+              </div>
+            </div>
 
-        <div className={this.state.showMenu ? '' : 'd-none'}>
-          <Menu addToCart={this.props.addToCart} />
-        </div>
-      </div>
+            <div className={this.state.showMenu ? '' : 'd-none'}>
+              <Menu addToCart={this.props.addToCart} />
+            </div>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

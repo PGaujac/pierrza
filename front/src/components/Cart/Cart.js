@@ -50,6 +50,7 @@ class Cart extends Component {
     return total;
   };
 
+  disableButton = () => this.props.cart.length > 0;
   //Add cart content to local storage
   render() {
     return (
@@ -83,7 +84,11 @@ class Cart extends Component {
                   >
                     Vider le panier
                   </Button>
-                  <Button onClick={() => this.props.post()} variant='light'>
+                  <Button
+                    onClick={() => this.props.post()}
+                    variant='light'
+                    disabled={!this.disableButton()}
+                  >
                     Commander !
                   </Button>
                 </div>

@@ -3,7 +3,7 @@ import { Container, Button } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
-import { toppings } from '../../data/toppings.json';
+// import { toppings } from '../../data/toppings.json';
 import Table from 'react-bootstrap/Table';
 
 import './PizzaPersoSelect.css';
@@ -163,7 +163,7 @@ export class PizzaPersoSelect extends Component {
                 <Button
                   variant='light'
                   onClick={() => {
-                    this.props.addToCart(toppings);
+                    this.props.addToCart(this.state.toppings);
                     this.toppingsToPizza();
                   }}
                 >
@@ -175,7 +175,7 @@ export class PizzaPersoSelect extends Component {
         </div>
         <img
           className={this.state.isActive === false ? 'not-active' : 'visible'}
-          src='/img/TMNT.jpg'
+          src='/img/vader.jpg'
           alt='lol'
         ></img>
 

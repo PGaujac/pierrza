@@ -81,7 +81,7 @@ export default class Menu extends Component {
             <Row>
               <Col>
                 <Card>
-                  <Table striped bordered hover variant='dark'>
+                  <Table responsive striped bordered hover variant='dark'>
                     <thead>
                       <tr>
                         <th>La Pierrza</th>

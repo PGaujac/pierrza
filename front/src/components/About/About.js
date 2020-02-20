@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import Chat from '../ChatBox/Chat';
 
 //Style import
 
@@ -73,7 +72,6 @@ class About extends Component {
             </Button>
           </Form>
         </div>
-        <Chat />
       </div>
     );
   }
